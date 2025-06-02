@@ -1,7 +1,9 @@
+import { Container } from "../../components/Container";
+
 export function Home() {
     return(
-        <div>
-            <h1>Home</h1>
-        </div>
+        <Container>
+            <div></div>
+        </Container>
     )
 }

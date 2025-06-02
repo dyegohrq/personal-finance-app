@@ -1,33 +1,88 @@
+
 @theme {
-    /* Beige */
-    --color-beige-100: #f8f4f0;
-    --color-beige-500: #98908b;
+  /* Beige */
+  --color-beige-100: #f8f4f0;
+  --color-beige-500: #98908b;
 
-    /* Grey */
-    --color-grey-100: #f2f2f2;
-    --color-grey-300: #b3b3b3;
-    --color-grey-500: #696868;
-    --color-grey-900: #201f24;
+  /* Grey */
+  --color-grey-100: #f2f2f2;
+  --color-grey-300: #b3b3b3;
+  --color-grey-500: #696868;
+  --color-grey-900: #201f24;
 
-    /* Secondary Colors */
-    --color-green: #277c78;
-    --color-yellow: #f2cdac;
-    --color-cyan: #82c907;
-    --color-navy: #626070;
-    --color-red: #c94736;
-    --color-purple-300: #826cb0;
+  /* Secondary Colors */
+  --color-green: #277c78;
+  --color-yellow: #f2cdac;
+  --color-cyan: #82c907;
+  --color-navy: #626070;
+  --color-red: #c94736;
+  --color-purple-300: #826cb0;
 
-    /* Other Colors */
-    --color-purple-100: #af81ba;
-    --color-turquoise: #597c7c;
-    --color-brown: #93674f;
-    --color-margenta: #934f6f;
-    --color-blue: #3f82b2;
-    --color-navy-grey: #97a0ac;
-    --color-army-green: #7f9161;
-    --color-gold: #cab361;
-    --color-orange: #be6c49;
+  /* Other Colors */
+  --color-purple-100: #af81ba;
+  --color-turquoise: #597c7c;
+  --color-brown: #93674f;
+  --color-margenta: #934f6f;
+  --color-blue: #3f82b2;
+  --color-navy-grey: #97a0ac;
+  --color-army-green: #7f9161;
+  --color-gold: #cab361;
+  --color-orange: #be6c49;
 
-    /* White */
-    --color-white: #fff;
+  /* White */
+  --color-white: #fff;
 }
+
+@utility filter-green {
+  filter: invert(40%) sepia(29%) saturate(798%) hue-rotate(128deg) brightness(96%) contrast(96%);
+}
+
+@utility filter-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+
+.text-present-1,
+.text-present-2,
+.text-present-3,
+.text-present-4,
+.text-present-4-bold,
+.text-present-5,
+.text-present-5-bold {
+    font-family: "Public Sans", sans-serif;
+    letter-spacing: 0px;
+}
+
+.text-present-1 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
+}
+.text-present-2 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+}
+.text-present-3 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+}
+.text-present-4 {
+    font-size: 14px;
+    line-height: 150%;
+}
+.text-present-4-bold {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 150%;
+}
+.text-present-5 {
+    font-size: 12px;
+    line-height: 150%;
+}
+.text-present-5-bold {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 150%;
+}
+
