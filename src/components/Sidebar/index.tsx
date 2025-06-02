@@ -6,10 +6,11 @@ import IconPots from "/assets/images/icon-nav-pots.svg";
 import IconTransactions from "/assets/images/icon-nav-transactions.svg";
 import IconRecurring from "/assets/images/icon-nav-recurring-bills.svg";
 import IconMenu from "../../../public/assets/images/icon-minimize-menu.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SidebarMenuDescktop } from "../SidebarMenuDescktop";
 import LogoImgSmall from "/assets/images/logo-small.svg";
 import LogoImgLarge from "/assets/images/logo-large.svg";
+import style from '../root.module.css'
 
 export function Sidebar() {
   const pathname = useLocation();
@@ -42,6 +43,8 @@ export function Sidebar() {
     },
   ];
 
+  useEffect(() => {setIsActiveMenu(false)}, [])
+
   function toggleMenu() {
     setIsActiveMenu((prev) => !prev);
   }
@@ -62,7 +65,7 @@ export function Sidebar() {
         </ul>
       </nav>
       <aside
-        className={` hidden lg:flex flex-col justify-between ${
+        className={` hidden lg:flex flex-col items-center justify-between  ${
           isActiveMenu ? "items-start" : "items-center"
         } gap-[24px] pt-[24px] ${
           isActiveMenu ? "pr-[24px]" : ""
@@ -89,14 +92,14 @@ export function Sidebar() {
             />
           ))}
         </ul>
-        <button onClick={toggleMenu} className="h-full">
+        <button onClick={toggleMenu} className={`h-full transition-all duration-300 ${isActiveMenu ? 'pl-[32px]' : ''} `}>
           {isActiveMenu ? (
-            <div>
+            <div className="flex items-center justify-between gap-[16px] " >
               <img src={IconMenu} alt="" />
-              <span>Minimize Menu</span>
+              <span className={`${style['text-present-5-bold']} hidden md:block text-grey-300`} >Minimize Menu</span>
             </div>
           ) : (
-            <img src={IconMenu} alt="" />
+            <img src={IconMenu} alt=""  className=" rotate-180 " />
           )}
         </button>
       </aside>

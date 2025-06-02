@@ -1,6 +1,8 @@
+import { Container } from "../../components/Container";
+
 export function Transactions() {
     return(
-        <div>
+        <Container title="Search transactions" >
             Overview
   Transactions
   Budgets
@@ -9,7 +11,7 @@ export function Transactions() {
 
   Minimize Menu
 
-  Search transactions
+  
 
   Sort by
   Latest
@@ -41,6 +43,6 @@ export function Transactions() {
 
   Prev
   Next
-        </div>
+        </Container>
     )
 }

@@ -1,2 +1,8 @@
 @import "tailwindcss";
-@import './components/root.module.css'
+@import './components/root.module.css';
+
+#root {
+    background-color: var(--color-beige-100);
+    display: grid; 
+    grid-template-columns: auto 1fr;
+}
