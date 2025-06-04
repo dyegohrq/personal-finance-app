@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container } from "../../components/Container";
 import { api } from "../../components/Services/api";
+import type { DashboardProps } from "../../components/Context/context";
+import { BalanceCard } from "../../components/BalanceCard";
 
 export function Home() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<DashboardProps[]>([])
 
 
   useEffect(() => {
@@ -25,38 +27,9 @@ export function Home() {
 
   return (
     <Container title="Overview" >
-      <div>
-        
-        <div>
-            <div>
-              Current Balance
-              {/* <span> {balance.current} </span> */}
-              {/* <!-- Add balance --> */}
-            </div>
-            Income
-            {/* <!-- Add income --> */}
-            Expenses
-            {/* <!-- Add expenses --> */}
-        </div>
-        <div>
-            <div>
-                Pots See Details Total Saved
-                {/* <!-- Add pots data --> */}
-            </div>
-            <div>
-                Budgets See Details
-                {/* <!-- Add budgets data --> */}
-            </div>
-            <div>
-                Transactions View All
-                {/* <!-- Add transactions data --> */}
-            </div>
-            <div>
-                Recurring Bills See Details
-                {/* <!-- Add recurring bills data --> */}
-            </div>
-        </div>
-      </div>
+      <BalanceCard label="Current Balance" amount={data.} />
     </Container>
   );
+
+  
 }
