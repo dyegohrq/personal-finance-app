@@ -6,6 +6,9 @@ interface BalanceCardProps{
 
 export function BalanceCard( { label, amount, dark }: BalanceCardProps ) {
     return(
-        <h1>card balance</h1>
+        <div>
+            <h1>{label}</h1>
+            <h1>{amount}</h1>
+        </div>
     )
 }
