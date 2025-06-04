@@ -9,6 +9,7 @@ export function BalanceCard( { label, amount, dark }: BalanceCardProps ) {
         <div>
             <h1>{label}</h1>
             <h1>{amount}</h1>
+            <h1>{dark}</h1>
         </div>
     )
 }

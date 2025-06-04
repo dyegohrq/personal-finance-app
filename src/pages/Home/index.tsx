@@ -8,6 +8,4 @@ export function Home() {
       <BalanceCard label="Current Balance" amount={data.balance.current} />
     </Container>
   );
-
-  
 }

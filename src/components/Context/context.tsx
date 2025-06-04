@@ -1,25 +1,25 @@
-import { createContext, useState, type ReactNode } from "react"
+// import { createContext, useState, type ReactNode } from "react"
 
-interface DashboardContextData {
-    dashboard: string[];
-}
+// interface DashboardContextData {
+//     dashboard: string[];
+// }
 
-interface DashboardProviderProps {
-    children: ReactNode;
-}
+// interface DashboardProviderProps {
+//     children: ReactNode;
+// }
 
-export const DashboardContext = createContext({} as DashboardContextData )
+// export const DashboardContext = createContext({} as DashboardContextData )
 
-export default function DashboardProvider( {children}: DashboardProviderProps ) {
-    const [dashboard, setDashboard] = useState([])
+// export default function DashboardProvider( {children}: DashboardProviderProps ) {
+//     const [dashboard, setDashboard] = useState([])
 
-    // return(
-    //     <DashboardContext.Provider
-    //         value={
-    //             dashboard
-    //         }
-    //     >
-    //         {children}
-    //     </DashboardContext.Provider>
-    // )
-}
+//     // return(
+//     //     <DashboardContext.Provider
+//     //         value={
+//     //             dashboard
+//     //         }
+//     //     >
+//     //         {children}
+//     //     </DashboardContext.Provider>
+//     // )
+// }
