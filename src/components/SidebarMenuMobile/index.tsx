@@ -13,7 +13,7 @@ export function SidebarMenuMobile(props: SidebarMenuProps) {
     return(
         <Link 
             to={`${props.url}`} 
-            className={` w-full h-full flex flex-col items-center justify-center gap-[4px] rounded-t-2xl border-b-4${ props.isActive ? 'border-b-green' : 'border-transparent' } ${ props.isActive ? 'active' : '' } ${props.isActive ? 'bg-white' : ''} `}     
+            className={` w-full h-full flex flex-col items-center justify-center gap-[4px] rounded-t-2xl  ${ props.isActive ? 'border-b-4 border-b-green' : ' border-b-0 border-transparent' } ${ props.isActive ? 'active' : '' } ${props.isActive ? 'bg-white' : ''} `}     
         >
             <span className='text-[24px]' > 
                 <img src={props.icon} alt="" className={`${ props.isActive ? ' filter-green ' : '' }`} />  

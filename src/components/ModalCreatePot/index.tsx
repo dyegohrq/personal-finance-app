@@ -1,10 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Modal } from "../Modal";
 import style from '../root.module.css'
+import { ColorSelected } from "../colorSelected";
 
 export function ModalCreatePot() {
     const [potName, setPotName] = useState('')
     const [target, setTarget] = useState('')
+    const [color, setColor] = useState('#277C78')
+
+    function handleSubmit(e: React.FormEvent) {
+        e.preventDefault()
+    }
 
     return(
         <Modal name="Pot" >
@@ -13,7 +19,7 @@ export function ModalCreatePot() {
                     Create a pot to set savings targets. These can help keep you on track as you save for special purchases.
                 </p>
 
-                <form action="">
+                <form onSubmit={handleSubmit} >
                     <label htmlFor="potName"  >
                         <span className={`${style['text-present-5-bold']} text-grey-500 `} >Pot Name</span>
                         <input 
@@ -41,6 +47,10 @@ export function ModalCreatePot() {
                             onChange={ (e) => setTarget(e.target.value) }
                             className={` border border-beige-500 outline-0 w-full px-[20px] py-[12px] rounded-lg mt-[4px] ${style['text-present-4']} text-grey-900 `}
                         />
+                    </label>
+                    <label>
+                        <span className={`${style['text-present-5-bold']} text-grey-500 `} >Color Tag</span>
+                        <ColorSelected selected={color} setSelected={setColor} />
                     </label>
                 </form>
             </div>

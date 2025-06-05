@@ -5,7 +5,7 @@ import IconOverview from "/assets/images/icon-nav-overview.svg";
 import IconPots from "/assets/images/icon-nav-pots.svg";
 import IconTransactions from "/assets/images/icon-nav-transactions.svg";
 import IconRecurring from "/assets/images/icon-nav-recurring-bills.svg";
-import IconMenu from "../../../public/assets/images/icon-minimize-menu.svg";
+import IconMenu from "/assets/images/icon-minimize-menu.svg";
 import { useEffect, useState } from "react";
 import { SidebarMenuDescktop } from "../SidebarMenuDescktop";
 import LogoImgSmall from "/assets/images/logo-small.svg";
