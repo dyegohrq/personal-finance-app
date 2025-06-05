@@ -5,6 +5,7 @@ import { Budgets } from "./pages/Budgets";
 import { Pots } from "./pages/Pots";
 import { Recurring } from "./pages/Recurring";
 import { Transactions } from "./pages/Transactions";
+import { ModalCreatePot } from "./components/ModalCreatePot";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,13 @@ const router = createBrowserRouter([
             },
             {
                 path: '/pots',
-                element: <Pots/>
+                element: <Pots/>,
+                children: [
+                    {
+                        path: 'create',
+                        element: <ModalCreatePot/>
+                    }
+                ]
             },
             {
                 path: '/recurring',

@@ -1,11 +1,16 @@
+import { Outlet } from "react-router";
 import { Container } from "../../components/Container";
 
 export function Pots() {
+    
+
     return(
-        <Container title="Pots" button name='Pot' >
+        <Container title="Pots" button name='Pot' url="/pots"  >
             <div>
                 
             </div>
+
+            <Outlet/>
         </Container>
     )
 }
